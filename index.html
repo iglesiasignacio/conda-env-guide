@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title> 🐍 conda environments made simple </title>
+    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+    <div class="scrollblock block-title">
+        <h1> 🐍 conda environments made simple</h1>
+        <p>
+            a few commands to get started using conda envs with jupyter <br>
+            like a cheatsheet but nicer
+        </p>
+        <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=gitguide" id="_carbonads_js"></script> -->
+        <img src="img/arrow.png" alt="" />
+    </div>
+
+    <a name="acknowledgements"></a>
+    <div class="scrollblock block-acknowledgements">
+        <h2> Acknowledgements</h2>
+        <p>
+            site idea stolen from Roger Dudler's awesome Git guide<br>
+            <a href='http://rogerdudler.github.com/git-guide'>http://rogerdudler.github.com/git-guide</a> <br><br>
+            and Vincent Warmerdam's great explanations<br>
+            <a href='https://calmcode.io/virtualenv/intro.html'>calmcode.io/virtualenvs</a>
+        </p>
+    </div>
+
+    <a name="setup"></a>
+    <div class="scrollblock block-setup">
+        <h2>setup</h2>
+        <p>
+            <a href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html">install conda</a> <br><br>
+            <a href="https://jupyter.org/install">install jupyter</a>
+        </p>
+    </div>
+
+    <a name="create"></a>
+    <div class="scrollblock block-create">
+        <h2>new environment</h2>
+        <p>
+            create a new environment with a specific python version<br>
+            <code>conda create -n my_environment python=3.8</code><br>
+            create copy of existing environment<br>
+            <code>conda create --clone original_env --name copy_env</code>
+        </p>
+    </div>
+
+    <a name="checkout"></a>
+    <div class="scrollblock block-checkout">
+        <h2>checkout environments</h2>
+        <p>
+            print environments available <br>
+            <code>conda info --envs</code><br />
+        </p>
+        <img src="img/envs.png" alt="" />
+    </div>
+
+    <a name="activation"></a>
+    <div class="scrollblock block-activation">
+        <h2>activate/deactivate</h2>
+        <p>
+            to start working in your environment you need to activate it <br>
+            <code>conda activate my_environment</code><br>
+            to deactivate it and return to base just<br>
+            <code>conda deactivate my_environment</code>
+        </p>
+    </div>
+
+    <a name="kernel"></a>
+    <div class="scrollblock block-kernel">
+        <h2>kernel</h2>
+        <p>
+            you first have to install the kernel <br>
+            <code>conda install -c anaconda ipykernel</code><br>
+            then make the new environment available there <br>
+            <code>ipython kernel install --user --name=my_environment</code><br>
+            you should now be able to run jupyter from your new env!
+        </p>
+    </div>
+
+    <a name="remove"></a>
+    <div class="scrollblock block-remove">
+        <h2>remove</h2>
+        <p>
+            if you are done with the environment<br>
+            <code>conda env remove -n my_environment</code>
+        </p>
+    </div>
+
+</body>
+</html>
